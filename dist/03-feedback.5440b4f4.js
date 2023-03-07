@@ -566,7 +566,7 @@ initForm();
 formEl.addEventListener("submit", onFormSubmit);
 formEl.addEventListener("input", (0, _lodashThrottleDefault.default)(onFormInput, 500));
 function onFormSubmit(e) {
-    ee.preventDefault();
+    e.preventDefault();
     const formData = new FormData(formEl);
     formData.forEach((value, name)=>console.log(value, name));
     e.currentTarget.reset();

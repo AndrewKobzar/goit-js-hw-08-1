@@ -9,7 +9,7 @@ formEl.addEventListener("submit", onFormSubmit);
 formEl.addEventListener("input", throttle(onFormInput, 500));
 
 function onFormSubmit(e) {
-  ee.preventDefault();
+  e.preventDefault();
   const formData = new FormData(formEl);
   formData.forEach((value, name) => console.log(value, name));
   e.currentTarget.reset();
