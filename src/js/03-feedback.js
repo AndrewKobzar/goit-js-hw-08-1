@@ -6,7 +6,7 @@ const formEl = document.querySelector(".feedback-form");
 initForm();
 
 formEl.addEventListener("submit", onFormSubmit);
-formEl.addEventListener("input", throttle(onFormInput, 500));
+formEl.addEventListener("input", throttle(onFormInput, 2000));
 
 function onFormSubmit(e) {
   e.preventDefault();

@@ -564,7 +564,7 @@ const LOCAL_STORAGE_KEY = "feedback-form-state";
 const formEl = document.querySelector(".feedback-form");
 initForm();
 formEl.addEventListener("submit", onFormSubmit);
-formEl.addEventListener("input", (0, _lodashThrottleDefault.default)(onFormInput, 500));
+formEl.addEventListener("input", (0, _lodashThrottleDefault.default)(onFormInput, 2000));
 function onFormSubmit(e) {
     e.preventDefault();
     const formData = new FormData(formEl);
