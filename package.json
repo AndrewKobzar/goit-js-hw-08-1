@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-08.git/"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/AndrewKobzar/goit-js-hw-08/issues"
   },
-  "homepage": "https://github.com/AndrewKobzar/goit-js-hw-08#readme",
+  "homepage": "https://github.com/AndrewKobzar/goit-js-hw-08",
   "dependencies": {
     "@vimeo/player": "^2.18.0",
     "lodash.throttle": "^4.1.1",
