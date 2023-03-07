@@ -565,17 +565,17 @@ const formEl = document.querySelector(".feedback-form");
 initForm();
 formEl.addEventListener("submit", onFormSubmit);
 formEl.addEventListener("input", (0, _lodashThrottleDefault.default)(onFormInput, 500));
-function onFormSubmit(evt) {
-    evt.preventDefault();
+function onFormSubmit(e) {
+    ee.preventDefault();
     const formData = new FormData(formEl);
     formData.forEach((value, name)=>console.log(value, name));
-    evt.currentTarget.reset();
+    e.currentTarget.reset();
     localStorage.removeItem(LOCAL_STORAGE_KEY);
 }
-function onFormInput(evt) {
+function onFormInput(e) {
     let persistedFilters = localStorage.getItem(LOCAL_STORAGE_KEY);
     persistedFilters = persistedFilters ? JSON.parse(persistedFilters) : {};
-    persistedFilters[evt.target.name] = evt.target.value;
+    persistedFilters[e.target.name] = e.target.value;
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(persistedFilters));
     console.log(persistedFilters);
 }
